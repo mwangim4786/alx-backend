@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Creates a class FIFOCache that inherits from BaseCaching and is a caching system: """
+
+
 BaseCaching = __import__('base_caching').BaseCaching
 
 
