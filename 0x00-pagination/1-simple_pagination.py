@@ -3,6 +3,7 @@
     page with default value 1 and page_size with default value 10.
 """
 
+
 import csv
 import math
 from typing import Tuple
@@ -41,7 +42,6 @@ class Server:
             return self.dataset()[start:end]
         except IndexError:
             return []
-
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
