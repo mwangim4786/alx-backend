@@ -57,6 +57,7 @@ class Server:
             'total_pages': total_pages
         }
 
+
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """ return in a list for pagination parameters. """
     start = (page - 1) * page_size
