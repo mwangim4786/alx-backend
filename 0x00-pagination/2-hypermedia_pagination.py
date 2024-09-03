@@ -32,16 +32,15 @@ class Server:
         """ Output page of dataset. """
         assert isinstance(page, int) and isinstance(page_size, int)
         assert page > 0 and page_size > 0
-    
+
         tuple = index_range(page, page_size)
         start = tuple[0]
         end = tuple[1]
-        
+
         try:
             return self.dataset()[start:end]
         except IndexError:
             return []
-
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         """ Return dictionary of pagination data. """
@@ -58,11 +57,8 @@ class Server:
             'total_pages': total_pages
         }
 
-
-
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """ return in a list for pagination parameters. """
     start = (page - 1) * page_size
     end = start + page_size
     return (start, end)
-

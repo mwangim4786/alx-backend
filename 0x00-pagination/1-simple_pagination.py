@@ -33,11 +33,11 @@ class Server:
         """ Output page of dataset. """
         assert isinstance(page, int) and isinstance(page_size, int)
         assert page > 0 and page_size > 0
-    
+
         tuple = index_range(page, page_size)
         start = tuple[0]
         end = tuple[1]
-        
+
         try:
             return self.dataset()[start:end]
         except IndexError:
@@ -49,4 +49,3 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
     start = (page - 1) * page_size
     end = start + page_size
     return (start, end)
-
