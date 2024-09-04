@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Create a class LRUCache that inherits from BaseCaching and is a caching system: """
+""" Create a class LRUCache that inherits from BaseCaching and
+    is a caching system:
+"""
 BaseCaching = __import__('base_caching').BaseCaching
 
 
