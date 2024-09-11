@@ -21,7 +21,7 @@ app.register_blueprint(app_routes)
 
 
 @babel.localeselector
-def ge_locale():
+def get_locale():
     """ Best match for supported languages """
     return request.accept_languages.best_match(app.config["LANGUAGES"])
 
