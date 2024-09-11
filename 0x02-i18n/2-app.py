@@ -2,7 +2,7 @@
 """ 2-app """
 from flask import Flask, request
 from flask_babel import Babel
-from routes.route0 import app_routes
+from routes.route2 import app_routes
 
 
 app = Flask(__name__)
@@ -24,6 +24,7 @@ app.register_blueprint(app_routes)
 def ge_locale():
     """ Best match for supported languages """
     return request.accept_languages.best_match(app.config["LANGUAGES"])
+
 
 if __name__ == "__main__":
     app.run(debug=True)
