@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+""" 1-app """
 from flask import Flask
 from flask_babel import Babel
 from routes.route1 import app_routes
